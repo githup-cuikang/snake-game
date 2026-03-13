@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="score-bar">
+      <span>当前分数：<span id="currentScore">0</span></span>
+      <span>最高分：<span id="highScore">0</span></span>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+      <div id="overlayStart" class="overlay">
+        <p>开始游戏</p>
+        <p class="hint">按 空格 或 Enter 开始</p>
+      </div>
+      <div id="overlayOver" class="overlay hidden">
+        <p>游戏结束</p>
+        <p>本局分数：<span id="finalScore">0</span></p>
+        <p class="hint">按 空格 或 Enter 再玩一次</p>
+        <button type="button" id="btnPlayAgain">再玩一次</button>
+      </div>
+      <div id="overlayPause" class="overlay overlay-pause hidden">
+        <p>已暂停</p>
+        <p class="hint">按 P 继续</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/snake.js"></script>
+  <script src="js/food.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
